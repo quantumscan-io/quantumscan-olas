@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantumscan-olas"
+version = "0.1.0"
+description = "QuantumScan client for Olas (Autonolas) and other Python-based autonomous agents — pre-transaction safety checks billed per-call via x402."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "QuantumScan", email = "hello@quantumscan.io" }]
+requires-python = ">=3.9"
+keywords = ["olas", "autonolas", "open-autonomy", "ai-agent", "blockchain-security", "x402", "quantumscan"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+]
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+x402 = ["x402[evm]>=2.0"]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://quantumscan.io"
+Repository = "https://github.com/quantumscan-io/quantumscan-olas"
+Issues = "https://github.com/quantumscan-io/quantumscan-olas/issues"
+
+[tool.setuptools]
+packages = ["quantumscan_olas"]
